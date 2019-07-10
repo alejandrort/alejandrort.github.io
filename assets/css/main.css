@@ -900,6 +900,7 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		text-align: center;
 	}
 
 		ul.icons li {
@@ -1659,7 +1660,63 @@ input, select, textarea {
 		}
 		
 		
-		.fa, .fas {
+.fa, .fas {
     font-weight: 900;
-    font-size: xx-large;
+    font-size: 50px;
 }
+
+
+.logo{
+	perspective: 1000px;
+}
+
+.flipper{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	transform-style: preserve-3d;
+    animation: cssAnimation 3s 1s infinite both;
+}
+
+
+.side {
+	backface-visibility: hidden;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+    transform: translate(-50%, -50%);  
+   
+}
+
+.front {
+  background-color: transparent;
+  z-index: 2;
+
+}
+
+.back {
+  background-color: transparent;
+  z-index: 1;
+  transform: translate(-50%, -50%) rotateY(-180deg);
+
+}
+
+
+@keyframes cssAnimation {
+   0% {
+    transform: rotateY(180deg);
+  }
+   1% {
+    transform: rotateY(180deg);
+	
+  }  
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+
+
+
+
+
