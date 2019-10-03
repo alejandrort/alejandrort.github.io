@@ -702,7 +702,7 @@ input, select, textarea {
 		}
 
 			.image.main img {
-				/*width: 100%;*/
+				width: 100%;
 			}
 
 		@media screen and (max-width: 736px) {
@@ -1542,7 +1542,7 @@ input, select, textarea {
 			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
 			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
-			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
+			padding: 4.5rem 2.5rem 2.5rem 2.5rem ;
 			position: relative;
 			width:90%;
 			max-width: 100%;
@@ -1728,10 +1728,16 @@ pointer-events:none;
 	
 }
 
+.photographysect{
+	border-radius: 4px;
+    display: block;
+}
+
 .photo{
+	width: auto;
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	max-height: 800px;
-	
+    display: block;	
 }
