@@ -9,8 +9,10 @@
 		<title>Alrote</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 	
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+			
 	</head>
 	<body class="is-preload">
 
@@ -63,9 +65,18 @@
 						<!-- Photography -->
 							<article id="photography">
 								<h2 class="major">Photography</h2>
-								<span class="image main"><img src="images/cascade-medium.jpg" alt="" /></span>
 								<p class="text-justify">Not so long ago I started to feel fascinated by the photography world. Since such a point, I have been constantly learning and taking photos wherever I go. </p>
-								<p class="text-justify">Through this webpage I will take the opportunity to share my shots.</p>
+								<p class="text-justify">Through this webpage I will take the opportunity to share my shots.</p>								
+								<div class="w3-content w3-display-container" style="max-width:95%;">							
+									<span class="image main w3-display-container mySlides w3-animate-opacity"><img class="" src="images/photography/cascade-medium.jpg"></span>
+									<span class="image main w3-display-container mySlides w3-animate-opacity"><img class="" src="images/photography/waterfall.jpeg"></span>
+									<span class="image main w3-display-container mySlides w3-animate-opacity"><img class="" src="images/photography/apes.jpeg"></span>
+									<span class="image main w3-display-container mySlides w3-animate-opacity"><img class="" src="images/photography/fuji.jpeg"></span>
+									<span class="image main w3-display-container mySlides w3-animate-opacity"><img class="" src="images/photography/toris.jpeg"></span>									
+									<span class="image main w3-display-container mySlides w3-animate-opacity"><img class="" src="images/photography/flower.jpeg"></span>																		
+									<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+									<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>									
+								</div>	
 								<!-- <article class="thumb">
 									<a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" alt="" /></a>
 									<h2>Magna feugiat lorem</h2>
@@ -377,6 +388,68 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<!--<script>
+			$( document ).ready(function() {
+				$(function() {
+					var bg = document.getElementById('bg');
+					var backgrounds = ['url("images/bg.jpg")',
+						'url("images/cascade-big.jpg")'];
+					var current = 0;
 
+					function nextBackground() {
+					var backgroundElement = backgrounds[current = ++current % backgrounds.length].concat(" !important");
+					console.log(backgroundElement);
+					$('#bg').css('background-image', backgroundElement);					
+						setTimeout(nextBackground, 5000);
+					}
+					var backgroundElementN = backgrounds[0].concat(" !important");
+					console.log(backgroundElementN);
+					setTimeout(nextBackground, 5000);
+						$('#bg').css('background-image', backgroundElementN);					
+				
+				});
+			});
+			</script>-->
+			<script>
+				var slideIndex = 1;
+				showDivs(slideIndex);
+
+				function plusDivs(n) {
+				  showDivs(slideIndex += n);
+				}
+
+				function showDivs(n) {
+					  var i;
+					  var x = document.getElementsByClassName("mySlides");
+					  if (n > x.length) {slideIndex = 1}
+					  if (n < 1) {slideIndex = x.length} ;
+					  for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";
+					  }
+					  x[slideIndex-1].style.display = "block";
+				}
+			</script>
+<!-- 			<script>
+				var slideIndex = 0;
+				showSlides();
+
+				function showSlides() {
+				  var i;
+				  var slides = document.getElementsByClassName("mySlides");
+				  var dots = document.getElementsByClassName("dot");
+				  for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				  }
+				  slideIndex++;
+				  if (slideIndex > slides.length) {slideIndex = 1}    
+				  for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";  
+				  dots[slideIndex-1].className += " active";
+				  setTimeout(showSlides, 4000); // Change image every 2 seconds
+				}
+			</script>
+-->
 	</body>
 </html>
